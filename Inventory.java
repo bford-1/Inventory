@@ -1,7 +1,6 @@
 import java.util.*;
 
-//sets an inventory class with an arrayList of items, a maximum weight, and an equipped armor item and equipped weapon item
-//methods for the class are also included
+
 public class Inventory{
 		private int maxWeight;
 		private Item equippedWeapon;
@@ -13,8 +12,7 @@ public class Inventory{
 		this.maxWeight=maxWeight;
 	}
 	
-	//adds and item to the inventory arrayList, checks to make sure the maximum weight won't be surpassed
-	//prints message to user about the sucess
+	
 	public boolean add(Item item){
 		int currentWeight=0;
 		for(int i=0;i<items.size();i++){
@@ -31,7 +29,7 @@ public class Inventory{
 			return false;
 		}
 	}
-	//calculates total inventory weight
+	
 	public int totalWeight(){
 		int sum=0;
 		for(int i=0;i<items.size();i++){
@@ -41,14 +39,14 @@ public class Inventory{
 		}
 		return sum;
 	}
-	//prints the inventory list
+	
 	public void print(){
 		System.out.printf("\n");
 		for(int i=0;i<items.size();i++){
 			System.out.println(items.get(i));
 		}
 	}
-	//alows the user to select which item from their inventory they want to drop and removes it from the inventory
+	
 	public void drop(){
 		Scanner input=new Scanner(System.in);
 		System.out.println("Press the number of the item you want to drop ");
@@ -61,7 +59,7 @@ public class Inventory{
 		selection--;
 		items.remove(selection);
 	}
-	//allows the user to see a printout of the weapons in their inventory and select one to be equipped
+	
 	public void equipWeapon(){
 		ArrayList<Item> weaponItems=new ArrayList<Item>();
 		for(int i=0;i<items.size();i++){
@@ -81,7 +79,7 @@ public class Inventory{
 		System.out.println(equippedWeapon.getName()+" was equipped");
 		}
 
-	//allows the user to see a printout of the armor in their inventory and select one to be equipped
+	
 	public void equipArmor(){
 		ArrayList<Item> armorItems=new ArrayList<Item>();
 		for(int i=0;i<items.size();i++){
