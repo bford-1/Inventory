@@ -1,9 +1,6 @@
 import java.util.*;
 
-/*creates randomly generated item, random number generator get three numbers between 1 and 5 for value, weight, and strength
- *  one number between 0 and 3 randomly picked to determin item type and a number between 0 and 5 selectes the respective item from the apropriate list
- *  the values are then passed into the Item constructer and the new item is returned
- *  */
+
 public class ItemGenerator{
 	public static Item generate(){
 	List<String> weapons=new ArrayList<>();
